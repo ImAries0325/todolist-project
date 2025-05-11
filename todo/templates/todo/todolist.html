@@ -18,7 +18,10 @@
     {% for todo in todos %}
     <div class="card">
     <small>{{todo.created}}</small>
-        <h2>{{todo.title}}</h2>
+        <h1>{{todo.id}}</h1>
+        <h2>
+            <a href="{% url 'viewtodo' todo.id %}">{{todo.title}}</a>
+        </h2>
         {% if todo.text %}
         <li>{{todo.text}}</li>
         {% endif %}
