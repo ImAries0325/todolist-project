@@ -6,10 +6,10 @@ from django.contrib.auth import login, logout, authenticate
 
 def user_login(request):
     message = ""
+    username = ""
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
-        print(username, password)
         user = authenticate(request, username=username, password=password)
         if not user:
             message = "帳號或密碼錯誤!"

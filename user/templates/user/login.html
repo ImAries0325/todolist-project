@@ -11,7 +11,7 @@
         {% csrf_token %}
         <p>
             <label for="username">名稱:</label>
-            <input required type="text" id="user" name="username">
+            <input required type="text" id="username" name="username" value="{{username}}">
         </p>
         <p>
             <label for="username">密碼:</label>
@@ -19,5 +19,6 @@
         </p>
         <button type="submit">登入</button>
     </form>
+    {{message}}
 </body>
 </html>
